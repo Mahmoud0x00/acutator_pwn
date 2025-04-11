@@ -16,6 +16,7 @@ pip install -r requirements.txt
    ```bash
    git clone https://github.com/your-username/actuator-fetcher.git
    cd actuator-fetcher
+   pip3 install -r requirements.txt
    ```
 
 2. Run the script with the following command:
@@ -34,27 +35,24 @@ pip install -r requirements.txt
   python src/actuator_pwn.py http://example.com/actuator/httptrace --save db
   ```
 
-## ✨ Features
-
-- **Dynamic Fetching**: Fetches data from the `/actuator/httptrace` endpoint at user-defined intervals.
-- **Flexible Saving Options**: Save data in either JSON format or an SQLite database.
-- **Runtime Control**: Specify how long the script should run using natural language (e.g., "10 minutes", "2 hours").
-
 
 ## 🖼️ Example Output
 
-```
-                 _                  _                _____ __          __ _   _ 
-     /\         | |                | |              |  __ \\ \        / /| \ | |
-    /  \    ___ | |_  _   _   __ _ | |_  ___   _ __ | |__) |\ \  /\  / / |  \| |
-   / /\ \  / __|| __|| | | | / _` || __|/ _ \ | '__||  ___/  \ \/  \/ /  | . ` |
-  / ____ \| (__ | |_ | |_| || (_| || |_| (_) || |   | |       \  /\  /   | |\  |
- /_/    \_\\___| \__| \__,_| \__,_| \__|\___/ |_|   |_|        \/  \/    |_| \_|
+```bash
+$ python3 actuator_pwn.py https://example.com/actuator/httptrace
 
-[+] Saving requests to: Output/requests_20250331123456.json
-[+] Request URI: http://example.com/api/resource?key=value
-[+] Request URI: http://example.com/api/resource?token=123
-[!] Runtime completed. Stopping the script.
+  
+ █████   ██████ ████████ ██    ██  █████  ████████  ██████  ██████  ██████  ██     ██ ███    ██ 
+██   ██ ██         ██    ██    ██ ██   ██    ██    ██    ██ ██   ██ ██   ██ ██     ██ ████   ██ 
+███████ ██         ██    ██    ██ ███████    ██    ██    ██ ██████  ██████  ██  █  ██ ██ ██  ██ 
+██   ██ ██         ██    ██    ██ ██   ██    ██    ██    ██ ██   ██ ██      ██ ███ ██ ██  ██ ██ 
+██   ██  ██████    ██     ██████  ██   ██    ██     ██████  ██   ██ ██       ███ ███  ██   ████                                                                                                                                                                
+        
+          Actuator PWN v1.0
+          by @mahmoud0x00
+        
+        
+[+] Saving requests to: Output/requests_20250411141905_bnzjh4.json
 ```
 
 ## 📂 Output Directory
@@ -71,4 +69,4 @@ Contributions are welcome! Feel free to submit a pull request or open an issue t
 
 ## 📧 Contact
 
-For any inquiries or feedback, reach out to [@mahmoud0x00](https://x.com/mahmoud0x00).
+If you have any questions or feedback, please reach out to [@mahmoud0x00](https://x.com/mahmoud0x00).
