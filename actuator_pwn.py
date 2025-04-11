@@ -22,7 +22,7 @@ class ActuatorFetcher:
         self.url = url
         self.interval = interval
         self.save_option = save_option
-        self.filename = os.path.join(OUTPUT_DIR, filename or self.generate_random_filename())
+        self.filename = os.path.join(OUTPUT_DIR, filename or self.generate_random_filename(extension=save_option))
         self.runtime_seconds = self.parse_runtime(runtime) if runtime else None
         self.start_time = None
 
@@ -144,19 +144,18 @@ class ActuatorFetcher:
 
 def print_logo():
     logo = f"""
-{Fore.CYAN}
+        {Fore.CYAN}
 
-                 _                  _                _____ __          __ _   _ 
-     /\         | |                | |              |  __ \\ \        / /| \ | |
-    /  \    ___ | |_  _   _   __ _ | |_  ___   _ __ | |__) |\ \  /\  / / |  \| |
-   / /\ \  / __|| __|| | | | / _` || __|/ _ \ | '__||  ___/  \ \/  \/ /  | . ` |
-  / ____ \| (__ | |_ | |_| || (_| || |_| (_) || |   | |       \  /\  /   | |\  |
- /_/    \_\\___| \__| \__,_| \__,_| \__|\___/ |_|   |_|        \/  \/    |_| \_|                         
-{Fore.YELLOW}
-{Fore.RED}  Actuator PWN v1.0
-{Fore.YELLOW}  by @mahmoud0x00
-{Style.RESET_ALL}
-"""
+ █████   ██████ ████████ ██    ██  █████  ████████  ██████  ██████  ██████  ██     ██ ███    ██ 
+██   ██ ██         ██    ██    ██ ██   ██    ██    ██    ██ ██   ██ ██   ██ ██     ██ ████   ██ 
+███████ ██         ██    ██    ██ ███████    ██    ██    ██ ██████  ██████  ██  █  ██ ██ ██  ██ 
+██   ██ ██         ██    ██    ██ ██   ██    ██    ██    ██ ██   ██ ██      ██ ███ ██ ██  ██ ██ 
+██   ██  ██████    ██     ██████  ██   ██    ██     ██████  ██   ██ ██       ███ ███  ██   ████                                                                                                                                                                
+        {Fore.YELLOW}
+        {Fore.RED}  Actuator PWN v1.0
+        {Fore.YELLOW}  by @mahmoud0x00
+        {Style.RESET_ALL}
+        """
     print(logo)
 
 
